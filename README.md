@@ -1,107 +1,100 @@
-# Website To-Do List for Autoskar.cz
+# Welcome to React Router!
 
-**I. Content Creation:**
+A modern, production-ready template for building full-stack React applications using React Router.
 
-* [ ] **Homepage:**
-    * [ ] Write compelling headline and brief overview.
-    * [ ] List key services with icons/bullets.
-    * [ ] Craft clear call-to-action buttons/links.
-    * [ ] Gather high-quality images of workshop, equipment, staff (with permission).
-    * [ ] Write location and contact information.
-    * [ ] Embed Google Map.
-    * [ ] Clearly display opening hours.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-* [ ] **Services Page:**
-    * [ ] Write detailed descriptions for each service.
-    * [ ] Highlight benefits of choosing Autoskar.cz.
+## Features
 
-* [ ] **About Us Page:**
-    * [ ] Write company history.
-    * [ ] Create team member profiles (photos and bios).
-    * [ ] Write statement of company values.
-    * [ ] List any certifications/accreditations.
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-* [ ] **Contact Page:**
-    * [ ] Create contact form.
-    * [ ] Repeat contact information and map.
-    * [ ] Repeat opening hours.
+## Getting Started
 
-* [ ] **Testimonials/Reviews Page:**
-    * [ ] Gather customer testimonials.
-    * [ ] Consider embedding reviews from Google My Business.
+### Installation
 
-* [ ] **Blog (Optional - Future):**
-    * [ ] Brainstorm initial blog post topics (car maintenance tips, etc.).
+Install the dependencies:
 
-* [ ] **FAQ Page (Optional - Future):**
-    * [ ] Compile a list of frequently asked questions and answers.
+```bash
+npm install
+```
 
-* [ ] **Gallery (Optional - Future):**
-    * [ ] Gather additional images for the gallery.
+### Development
 
-**II. Website Development:**
+Start the development server with HMR:
 
-* [ ] **Domain Registration:**
-    * [ ] Choose and register a domain name (e.g., autoskar.cz).
+```bash
+npm run dev
+```
 
-* [ ] **Hosting:**
-    * [ ] Choose a reliable web hosting provider.
+Your application will be available at `http://localhost:5173`.
 
-* [ ] **Website Design/Template:**
-    * [ ] Select a professional and mobile-friendly website template or design.
+## Building for Production
 
-* [ ] **Content Integration:**
-    * [ ] Upload and format all website content.
+Create a production build:
 
-* [ ] **SEO Optimization:**
-    * [ ] Research and implement relevant keywords throughout the website content.
-    * [ ] Optimize images for web performance.
+```bash
+npm run build
+```
 
-* [ ] **Mobile Responsiveness:**
-    * [ ] Thoroughly test the website on different devices (desktops, tablets, smartphones).
+## Deployment
 
-* [ ] **Contact Form Setup:**
-    * [ ] Configure the contact form to send emails to the correct address.
+### Docker Deployment
 
-* [ ] **Google Analytics Integration (Optional):**
-    * [ ] Set up Google Analytics to track website traffic.
+This template includes three Dockerfiles optimized for different package managers:
 
-* [ ] **SSL Certificate (Highly Recommended):**
-    * [ ] Install an SSL certificate to secure the website (HTTPS).
+- `Dockerfile` - for npm
+- `Dockerfile.pnpm` - for pnpm
+- `Dockerfile.bun` - for bun
 
-* [ ] **Testing:**
-    * [ ] Thoroughly test all website functionality (links, forms, etc.).
+To build and run using Docker:
 
-**III. Post-Launch:**
+```bash
+# For npm
+docker build -t my-app .
 
-* [ ] **Website Promotion:**
-    * [ ] Add website URL to business cards, brochures, etc.
-    * [ ] Submit the website to search engines.
-    * [ ] Consider online advertising (Google Ads, etc.).
+# For pnpm
+docker build -f Dockerfile.pnpm -t my-app .
 
-* [ ] **Maintenance:**
-    * [ ] Regularly update website content and software.
-    * [ ] Monitor website performance and address any issues.
+# For bun
+docker build -f Dockerfile.bun -t my-app .
 
-**IV. Optional (Future Development):**
+# Run the container
+docker run -p 3000:3000 my-app
+```
 
-* [ ] **Online Booking/Scheduling System:**
-    * [ ] Research and implement an online booking system.
+The containerized application can be deployed to any platform that supports Docker, including:
 
-* [ ] **Multilingual Support:**
-    * [ ] Consider adding support for other languages.
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
 
-* [ ] **E-commerce Integration (If selling products):**
-    * [ ] Set up an online store to sell car parts or merchandise.
+### DIY Deployment
 
-**Priorities:**
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
 
-* **High:** Essential content and basic website functionality.
-* **Medium:** Desirable content and features.
-* **Low:** Optional features and future development.
+Make sure to deploy the output of `npm run build`
 
-**Status:**
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
 
-* [ ] - Not started
-* [x] - Completed
-* [/] - In progress
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
