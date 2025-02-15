@@ -1,6 +1,6 @@
 import { Scroll } from "lucide-react";
 import { Card, Carousel } from "~/components/ui/carousel";
-import PricingCalculator from "~/components/ui/pricing-calculator";
+import { PricingCalculator } from "~/components/ui/pricing-calculator";
 import { ScrollingImages } from "~/components/ui/scrolling-images";
 import { DefaultLayout } from "~/layout/default-layout";
 
@@ -119,7 +119,7 @@ export function HomePage() {
         <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center">
           Cenová kalkulace
         </h1>
-        <div className="md:p-20 mt-10 bg-white rounded-3xl">
+        <div className="mt-10">
           <PricingCalculator />
         </div>
       </div>
