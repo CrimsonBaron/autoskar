@@ -117,10 +117,78 @@ export function HomePage() {
       </div>
       <div className="md:p-10 py-6">
         <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center">
-          Cenová kalkulace
+          Ceník
         </h1>
-        <div className="mt-10">
-          <PricingCalculator />
+        <div className="mt-10 cursor-pointer">
+          <div className="container mx-auto py-8 bg-gray-100 p-12 rounded-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Diagnostika vozu základní proměření</h3>
+                <p className="text-2xl font-semibold">500 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Vyleštění předních a zadních světel</h3>
+                <p className="text-2xl font-semibold">500 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Kontrola klima a doplnění oleje do klima</h3>
+                <p className="text-2xl font-semibold">500 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Kompletní přezutí pneu na stejný disk (1 kolo)</h3>
+                <p className="text-2xl font-semibold">200 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Doplnění chladiva 134a (1 gram)</h3>
+                <p className="text-2xl font-semibold">2 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Vyčištění vozu ozónovačem</h3>
+                <p className="text-2xl font-semibold">500 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Měření osciloskopem</h3>
+                <p className="text-2xl font-semibold">1500 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Montáž tažného zařízení</h3>
+                <p className="text-2xl font-semibold">1500-2000 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Příprava a provedení STK a emisí</h3>
+                <p className="text-2xl font-semibold">1500 Kč</p>
+              </div>
+              <div className="border border-gray-200 p-4 text-center rounded-3xl">
+                <h3 className="text-lg font-bold">Hodina opravy vozu</h3>
+                <p className="text-2xl font-semibold">500 Kč</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 px-10">
+              <p className="text-gray-600">
+                * Uvedené ceny jsou pouze orientační. Konečná cena se může lišit v závislosti na specifických
+                potřebách Vašeho vozu. Pro přesnou cenovou nabídku nás neváhejte <span className="font-bold underline cursor-pointer">kontaktovat</span>.
+              </p>
+          </div>
+        </div>
+        <div className="md:p-10 py-6">
+          <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center">
+            Kontakt
+          </h1>
+          <div className="flex flex-row gap-5 mt-10">
+            <div className="rounded-3xl flex-1 bg-white">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d565.3092516649582!2d15.12666920807177!3d50.4394771039726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470ea95c74fb9165%3A0x8c291ac8c9cc7d7c!2sAutoservis%20Oskar%20Ki%C5%A1%C5%A1!5e0!3m2!1sen!2scz!4v1739808544255!5m2!1sen!2scz" width="600" height="450" className="w-full rounded-3xl" loading="eager" ></iframe>
+            </div>
+            <div className="rounded-3xl w-1/3 bg-black text-white p-10 flex flex-col items-center justify-center">
+              <div className="p-5 border rounded-full w-2/5">
+                avater
+              </div>
+              <h2>Oskar Kišš</h2>
+              <button className="btn-outline text-white">
+                Volejte hned
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </DefaultLayout>
