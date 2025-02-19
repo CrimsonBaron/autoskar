@@ -58,7 +58,7 @@ export function ScrollingImages({ images }: ScrollingImagesProps) {
           <motion.img
             key={`scrolling-image-${index}-${image}`}
             src={image}
-            className="w-1/3 h-96 object-cover rounded-lg"
+            className=" h-96 object-cover rounded-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: index * 0.1 }}

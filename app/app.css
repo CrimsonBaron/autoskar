@@ -15,6 +15,8 @@ body {
   @apply hover:bg-white hover:border-white font-bold transition delay-50 duration-200 text-gray-900 border border-gray-500 px-4 p-2 rounded-xl ;
 }
 
-.btn-black {
-  @apply bg-black text-white hover:border-black border hover:bg-white hover:text-black font-bold px-4 p-2 rounded-xl transition delay-50 duration-200;
+.btn-white {
+  @apply bg-white text-black hover:bg-black hover:text-white font-bold px-4 p-2 rounded-xl transition delay-50 duration-200;
 }
+
+
