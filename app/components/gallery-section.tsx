@@ -1,5 +1,6 @@
 import {ScrollingImages} from "~/components/ui/scrolling-images";
 import React from "react";
+import {Marquee} from "~/components/ui/marquee";
 
 const images = [
     "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -12,13 +13,28 @@ const images = [
 
 export function GallerySection() {
     return (
-        <div className="md:p-10 py-6">
-            <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center">
+        <section className="md:p-10 py-6" aria-label={"gallery section"}>
+            <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center mb-10">
                 Nahlédněte do naší dílny
             </h1>
-            <div className="md:p-20 mt-10 bg-white rounded-3xl overflow-hidden">
-                <ScrollingImages images={images} />
+            <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+                <Marquee pauseOnHover className="[--duration:20s]">
+                    {
+                        images.map((image, index) => (
+                            <img src={image} alt={`${image}-{index}.png`} className={"h-96 rounded-3xl"}/>
+                        ))
+                    }
+                </Marquee>
+                <Marquee reverse pauseOnHover className="[--duration:20s]">
+                    {
+                        images.map((image, index) => (
+                            <img src={image} alt={`${image}-{index}.png`} className={"h-96 rounded-3xl"}/>
+                        ))
+                    }
+                </Marquee>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
             </div>
-        </div>
+        </section>
     )
 }

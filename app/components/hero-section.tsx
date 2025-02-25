@@ -2,7 +2,7 @@ import React from "react";
 
 export function HeroSection() {
     return (
-        <div className="flex sm:flex-row flex-col md:p-15">
+        <section className="flex sm:flex-row flex-col md:p-15" aria-label={"hero section"}>
             <div className="flex-1">
                 <h1 className="text-4xl font-bold leading-tight tracking-wide text-gray-800 md:text-5xl">
                     Vaše auto, naše priorita, <br/>
@@ -15,6 +15,6 @@ export function HeroSection() {
             <div className="flex-1">
                 {/* add 3d car model some cartoonish stuff */}
             </div>
-        </div>
+        </section>
     )
 }

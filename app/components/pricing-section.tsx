@@ -2,7 +2,7 @@ import React from "react";
 
 export function PricingSection() {
     return (
-        <div className="md:p-10 py-6">
+        <section className="md:p-10 py-6" aria-label={"pricing section"}>
             <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center">
                 Ceník
             </h1>
@@ -58,6 +58,6 @@ export function PricingSection() {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
