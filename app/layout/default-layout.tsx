@@ -1,5 +1,6 @@
 import type {ReactNode} from "react"
 import { NavBar } from "~/components/navbar"
+import {Footer} from "~/components/footer";
 
 
 
@@ -12,9 +13,7 @@ export function DefaultLayout ({children}: {children: ReactNode}) {
             <main className="flex-grow">
                 {children}
             </main>
-            <footer className="text-center">
-            <p>&copy; 2021</p>
-            </footer>
+            <Footer />
         </div>
     )
 }
