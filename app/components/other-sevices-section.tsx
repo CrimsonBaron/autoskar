@@ -1,38 +1,68 @@
 import {Card, Carousel} from "~/components/ui/carousel";
 import React from "react";
 
+import alternatorRepair from "/images/services/alternator_repair.jpg"
+import autoAlarm from "/images/services/autoalarm_repair.jpg"
+import batery from "/images/services/baterysystem_repair.jpg"
+import breakRepair from "/images/services/breaksystem_repair.jpg"
+import exhaustSystem from "/images/services/exhaustsystem_repair.jpg"
+import interiorCleaning from "/images/services/interiorcleaning_repair.jpg"
+import parkingRepair from "/images/services/parking_repair.jpg"
+import underCarage from "/images/services/undercaragesystem_repair.jpg"
+import windsheildRepair from "/images/services/windshield_repair.jpg"
+import airConditiongRepair from "/images/services/airconditioning_repair.jpg"
 
 const data = [
     {
-        description: "Artificial Intelligence",
-        title: "You can do more with AI.",
-        src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Kompletní servis klimatizačních systémů, dezinfekce.",
+        title: "Opravy klimatizace",
+        src: airConditiongRepair,
     },
     {
-        description: "Productivity",
-        title: "Enhance your productivity.",
-        src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Výměna a oprava brzdových komponentů, ABS",
+        title: "Brzdový servis",
+        src: breakRepair,
     },
     {
-        description: "Product",
-        title: "Launching the new Apple Vision Pro.",
-        src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Výměna a opravy výfuků, svařování.",
+        title: "Výfukové systémy",
+        src: exhaustSystem,
     },
 
     {
-        description: "Product",
-        title: "Maps for your iPhone 15 Pro Max.",
-        src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Opravy a výměny podvozkových dílů, geometrie kol.",
+        title: "Podvozek",
+        src: underCarage,
     },
     {
-        description: "iOS",
-        title: "Photography just got better.",
-        src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Prodej, výměna, testování a dobíjení baterií.",
+        title: "Autobaterie",
+        src: batery,
     },
     {
-        description: "Hiring",
-        title: "Hiring for a Staff Software Engineer",
-        src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description: "Opravy a repase startérů a alternátorů.",
+        title: "Startéry a alternátory",
+        src: alternatorRepair,
+    },
+    {
+        description: "Výměna a oprava autoskel",
+        title: "Autosklo",
+        src: windsheildRepair,
+    },
+    {
+        description: "Montáž parkovacích systémů.",
+        title: "Parkovací senzory/kamery",
+        src: parkingRepair,
+    },
+    {
+        description: "Montáž zabezpečovacích systémů.",
+        title: "Autoalarmy",
+        src: autoAlarm,
+    },
+    {
+        description: "Hloubkové čištění interiéru vozidla.",
+        title: "Čištění interiéru",
+        src: interiorCleaning,
     },
 ];
 
