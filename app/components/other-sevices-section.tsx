@@ -73,7 +73,7 @@ export function OtherSevicesSection() {
 
 
     return (
-        <section className="md:p-10 py-6 max-w-7xl" aria-label={"other sevices"}>
+        <section className="md:p-10 py-6" aria-label={"other sevices"}>
             <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center">
                 A to není vše!
             </h1>

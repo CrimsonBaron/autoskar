@@ -6,11 +6,11 @@ import {Footer} from "~/components/footer";
 
 export function DefaultLayout ({children}: {children: ReactNode}) {
     return (
-        <div className="mx-auto min-h-screen flex flex-col p-10">
-            <header className="max-w-7xl flex justify-between flex-col items-center">
+        <div className="max-w-7xl mx-auto min-h-screen flex flex-col p-10">
+            <header>
                 <NavBar />
             </header>
-            <main className="flex-grow justify-center flex flex-col items-center">
+            <main className="flex-grow">
                 {children}
             </main>
             <Footer />
