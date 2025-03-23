@@ -1,6 +1,7 @@
 import {ScrollingImages} from "~/components/ui/scrolling-images";
 import React from "react";
 import {Marquee} from "~/components/ui/marquee";
+import {Skeleton} from "~/components/ui/skeleton";
 
 const images = [
     "/images/img_shop_01.jpg",
@@ -21,14 +22,22 @@ export function GallerySection() {
                     <Marquee pauseOnHover className="[--duration:20s]">
                         {
                             images.map((image, index) => (
-                                <img src={image} alt={`${image}-{index}.png`} className={"h-96 rounded-3xl"}/>
+                                image ? (
+                                    <img key={index} src={image} alt={`${image}-${index}.png`} className={"h-96 rounded-3xl"} />
+                                ) : (
+                                    <Skeleton key={index} className={"w-96 h-96 rounded-3xl"} />
+                                )
                             ))
                         }
                     </Marquee>
                     <Marquee reverse pauseOnHover className="[--duration:20s]">
                         {
                             images.map((image, index) => (
-                                <img src={image} alt={`${image}-{index}.png`} className={"h-96 rounded-3xl"}/>
+                                image ? (
+                                    <img key={index} src={image} alt={`${image}-${index}.png`} className={"h-96 rounded-3xl"} />
+                                ) : (
+                                    <Skeleton key={index} className={"w-96 h-96 rounded-3xl"} />
+                                )
                             ))
                         }
                     </Marquee>
