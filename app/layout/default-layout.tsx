@@ -6,7 +6,7 @@ import {Footer} from "~/components/footer";
 
 export function DefaultLayout ({children}: {children: ReactNode}) {
     return (
-        <div className="max-w-7xl mx-auto min-h-screen flex flex-col p-10">
+        <div className="max-w-7xl relative mx-auto min-h-screen flex flex-col p-10">
             <header>
                 <NavBar />
             </header>

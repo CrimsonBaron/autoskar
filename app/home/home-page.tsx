@@ -17,6 +17,7 @@ export function HomePage() {
         <AboutUsSection/>
         <OtherSevicesSection />
         <GallerySection />
+        <div className={"h-[60rem]"}></div>
         <PricingSection />
         <ContactSection/>
     </DefaultLayout>
