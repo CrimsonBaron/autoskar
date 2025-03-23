@@ -9,7 +9,7 @@ export function ContactSection(){
     const [isCallButtonHovered, setIsCallButtonHovered] = useState<boolean>(false);
 
     return (
-        <section className="md:p-10 py-6" aria-label={"contact section"}>
+        <section className="md:p-10 py-6" aria-label={"contact section"} id={"contact-section"}>
             <motion.h1
                 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center"
                 initial={{
