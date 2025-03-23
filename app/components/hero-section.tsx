@@ -2,7 +2,7 @@ import React from "react";
 
 export function HeroSection() {
     return (
-        <section className="flex sm:flex-row flex-col md:p-15" aria-label={"hero section"}>
+        <section className="flex sm:flex-row flex-col md:p-15 max-w-7xl" aria-label={"hero section"}>
             <div className="flex-1">
                 <h1 className="text-4xl font-bold leading-tight tracking-wide text-gray-800 md:text-5xl">
                     Vaše auto, naše priorita, <br/>

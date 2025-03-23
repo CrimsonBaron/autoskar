@@ -31,7 +31,7 @@ export function PricingSection() {
     ];
 
     return (
-        <section className="md:p-10 py-6" aria-label={"pricing section"}>
+        <section className="md:p-10 py-6 max-w-7xl" aria-label={"pricing section"}>
             <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1 mb-10 text-center">
                 Ceník
             </h1>

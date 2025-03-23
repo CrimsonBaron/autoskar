@@ -12,10 +12,13 @@ import {HeroSection} from "~/components/hero-section";
 export function HomePage() {
   return (
     <DefaultLayout>
-        <HeroSection/>
-        <MainServicesSection/>
-        <AboutUsSection/>
-        <OtherSevicesSection />
+        <div className={"max-w-7xl"}>
+            <HeroSection/>
+            <MainServicesSection/>
+            <AboutUsSection/>
+            <OtherSevicesSection />
+        </div>
+
         <GallerySection />
         <PricingSection />
         <ContactSection/>

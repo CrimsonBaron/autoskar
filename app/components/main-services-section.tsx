@@ -6,7 +6,7 @@ import pneuservis from "/images/pneuservis.jpg"
 
 export function MainServicesSection() {
     return (
-        <section className="md:p-15 py-6 flex flex-col justify-center mx-auto h-[42rem]" aria-label={"main services"}>
+        <section className="md:p-15 py-6 flex flex-col justify-center mx-auto h-[42rem] max-w-7xl" aria-label={"main services"}>
             <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1 text-center">
                 Kompletní péče o Váš vůz
             </h1>
