@@ -1,5 +1,6 @@
 import React from "react";
 import {CircleCheck} from "lucide-react";
+import {motion} from "framer-motion";
 
 export function PricingSection() {
     const serviceCategories = [
@@ -32,12 +33,45 @@ export function PricingSection() {
 
     return (
         <section className="md:p-10 py-6" aria-label={"pricing section"}>
-            <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1 mb-10 text-center">
+            <motion.h1
+                className="text-5xl font-medium leading-tight tracking-wide flex-1 mb-10 text-center"
+                initial={{
+                    opacity: 0,
+                    y: 20,
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                        duration: 0.5,
+                        delay: 0.2 ,
+                        ease: "easeOut",
+                    },
+                }}
+                viewport={{once: true}}
+            >
                 Ceník
-            </h1>
+            </motion.h1>
             <div className="container mx-auto p-4">
             {serviceCategories.map((category, index) => (
-                <div key={index} className="bg-white rounded-3xl shadow p-10 mb-5">
+                <motion.div
+                    key={index}
+                    className="bg-white rounded-3xl shadow p-10 mb-5"
+                    initial={{
+                        opacity: 0,
+                        y: 20,
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                            duration: 0.5,
+                            delay: 0.2*index ,
+                            ease: "easeOut",
+                        },
+                    }}
+                    viewport={{once: true}}
+                >
                     <h3 className="text-3xl font-medium mb-5">{category.title}</h3>
                     <ul className="space-y-2">
                         {category.services.map((service, i) => (
@@ -50,12 +84,29 @@ export function PricingSection() {
                             </li>
                         ))}
                     </ul>
-                </div>
+                </motion.div>
             ))}
-                <p className="mt-6 text-sm text-gray-600">
+                <motion.p
+                    className="mt-6 text-sm text-gray-600"
+
+                    initial={{
+                        opacity: 0,
+                        y: 20,
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                            duration: 0.5,
+                            delay: 0.2*3 ,
+                            ease: "easeOut",
+                        },
+                    }}
+                    viewport={{once: true}}
+                >
                     * Uvedené ceny jsou pouze orientační. Konečná cena se může lišit v závislosti na specifických
                     potřebách Vašeho vozu. Pro přesnou cenovou nabídku nás neváhejte <span className="font-bold underline cursor-pointer">kontaktovat</span>.
-                </p>
+                </motion.p>
         </div>
         </section>
     )
