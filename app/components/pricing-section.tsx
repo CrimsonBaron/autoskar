@@ -6,8 +6,8 @@ export function PricingSection() {
         {
             title: 'Diagnostika a kontroly',
             services: [
-                { name: 'Základní diagnostika vozidla', price: '500 Kč' },
-                { name: 'Kontrola klimatizace a doplnění oleje', price: '500 Kč' },
+                { name: 'Základní diagnostika vozidla', price: '600 Kč' },
+                { name: 'Kontrola klimatizace a doplnění oleje', price: '900 Kč' },
                 { name: 'Měření osciloskopem', price: '1500 Kč' },
             ],
         },
@@ -15,10 +15,10 @@ export function PricingSection() {
             title: 'Údržba a opravy',
             services: [
                 { name: 'Leštění světlometů a zadních světel', price: '500 Kč' },
-                { name: 'Výměna pneumatik (stejný ráfek, za kolo)', price: '200 Kč' },
+                { name: 'Výměna pneumatik (stejný ráfek, za kolo)', price: '250 Kč' },
                 { name: 'Doplnění chladiva (za gram)', price: '2 Kč' },
-                { name: 'Montáž tažného zařízení', price: '1500-2000 Kč' },
-                { name: 'Hodinová sazba práce', price: '500 Kč' },
+                { name: 'Montáž tažného zařízení', price: '2000-2500 Kč' },
+                { name: 'Hodinová sazba práce', price: '600 Kč' },
             ],
         },
         {
@@ -45,7 +45,6 @@ export function PricingSection() {
                                 key={i}
                                 className="flex flex-row items-center justify-between"
                             >
-                                <CircleCheck className={"stroke-green-300/80"}/>
                                 <div className="flex-1 ml-2">{service.name}</div>
                                 <div className="font-semibold">{service.price}</div>
                             </li>
