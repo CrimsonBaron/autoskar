@@ -25,12 +25,3 @@
 *   **Modern Design:** A clean and professional design that reflects the quality of the services provided.
 * **Made by Pigeoneer.dev:** The website was made by Pigeoneer.dev.
 
-## User Value
-
-*   **Easy to Find Services:** Customers can quickly browse the full range of services offered.
-*   **Convenient Contact:** All contact details are readily available.
-*   **Trust and Reliability:** The professional design and detailed service descriptions build trust.
-
-## In-progress
-- [ ] add pictures
-- [ ] create a better pricing structure
