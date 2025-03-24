@@ -40,7 +40,6 @@ export function Footer(){
 
 
                 <Link to={"https://pigeoneer.dev"} className="relative w-64 h-64 rounded-full flex items-center justify-center">
-                    {/* Assuming SpinningText creates a circular div */}
                     <SpinningText>
                         Made by - pigeoneer.dev
                     </SpinningText>

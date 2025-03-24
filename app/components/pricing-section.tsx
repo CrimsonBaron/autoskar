@@ -52,11 +52,11 @@ export function PricingSection() {
             >
                 Ceník
             </motion.h1>
-            <div className="container mx-auto p-4">
+            <div className="mx-auto md:px-0">
             {serviceCategories.map((category, index) => (
                 <motion.div
                     key={index}
-                    className="bg-white rounded-3xl shadow p-10 mb-5"
+                    className="bg-white rounded-3xl shadow p-10  mb-5"
                     initial={{
                         opacity: 0,
                         y: 20,
@@ -75,11 +75,11 @@ export function PricingSection() {
                     <h3 className="text-3xl font-medium mb-5">{category.title}</h3>
                     <ul className="space-y-2">
                         {category.services.map((service, i) => (
-                            <li
+                            <li className="flex flex-col md:flex-row items-start md:items-center justify-between"
                                 key={i}
-                                className="flex flex-row items-center justify-between"
                             >
-                                <div className="flex-1 ml-2">{service.name}</div>
+                                <div className="flex-1 md:ml-2 mb-1 md:mb-0">{service.name}</div>
+
                                 <div className="font-semibold">{service.price}</div>
                             </li>
                         ))}

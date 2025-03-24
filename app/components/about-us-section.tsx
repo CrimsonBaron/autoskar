@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 
 export function AboutUsSection() {
     return (
-        <section className="md:p-20 p-2 mx-auto flex flex-col justify-center items-center" aria-label="about-us">
+        <section className="md:p-20 w-full flex flex-col justify-center items-center" aria-label="about-us">
             <motion.div
                 className="md:p-10 p-4 text-center md:w-xl  flex flex-col gap-2 text-black/60 border border-black/20 rounded-3xl"
                 initial={{
