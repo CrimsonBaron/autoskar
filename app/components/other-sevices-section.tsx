@@ -1,5 +1,6 @@
 import {Card, Carousel} from "~/components/ui/carousel";
 import React from "react";
+import {motion} from "framer-motion";
 
 import alternatorRepair from "/images/services/alternator_repair.jpg"
 import autoAlarm from "/images/services/autoalarm_repair.jpg"
@@ -74,9 +75,25 @@ export function OtherSevicesSection() {
 
     return (
         <section className="md:p-10 py-6" aria-label={"other sevices"}>
-            <h1 className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center">
+            <motion.h1
+                className="text-5xl font-medium leading-tight tracking-wide flex-1  text-center"
+                initial={{
+                    opacity: 0,
+                    y: 20,
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                        duration: 0.5,
+                        delay: 0.2 ,
+                        ease: "easeOut",
+                    },
+                }}
+                viewport={{once: true}}
+            >
                 A to není vše!
-            </h1>
+            </motion.h1>
             <div className="md:p-5">
                 <Carousel items={cards} />
             </div>

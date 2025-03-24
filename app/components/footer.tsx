@@ -3,10 +3,29 @@ import logoLong from '/logo-full.svg';
 import {SpinningText} from "~/components/ui/spinning-text";
 import { Link } from "react-router";
 import logoPigeonSoft from "/logo-pigeon-soft.svg"
+import {motion} from "framer-motion";
+
 
 export function Footer(){
     return (
-        <footer className="bg-black bg-opacity-50 text-white rounded-3xl p-10 z-10 relative ">
+        <motion.footer
+            className="bg-black bg-opacity-50 text-white rounded-3xl p-10 z-10 relative "
+            initial={{
+                opacity: 0,
+                y: 20,
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                    duration: 0.5,
+                    delay: 0.2 ,
+                    ease: "easeOut",
+                },
+            }}
+            viewport={{once: true}}
+
+        >
             <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="mb-6 md:mb-0">
                     <img src={logoLong} alt="Logo Autoskar" className="w-64" />
@@ -21,7 +40,6 @@ export function Footer(){
 
 
                 <Link to={"https://pigeoneer.dev"} className="relative w-64 h-64 rounded-full flex items-center justify-center">
-                    {/* Assuming SpinningText creates a circular div */}
                     <SpinningText>
                         Made by - pigeoneer.dev
                     </SpinningText>
@@ -33,7 +51,7 @@ export function Footer(){
                     />
                 </Link>
             </div>
-        </footer>
+        </motion.footer>
     );
 };
 
