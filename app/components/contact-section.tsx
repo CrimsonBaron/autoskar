@@ -8,6 +8,14 @@ export function ContactSection(){
 
     const [isCallButtonHovered, setIsCallButtonHovered] = useState<boolean>(false);
 
+    const handleOpenEmail = () => {
+        window.location.href = 'mailto:kiss.o@seznam.cz';
+    };
+
+    const handleOpenCall = () => {
+        window.location.href = 'tel:+420607528761';
+    };
+
     return (
         <section className="md:p-10 py-6" aria-label={"contact section"} id={"contact-section"}>
             <motion.h1
@@ -67,8 +75,8 @@ export function ContactSection(){
                     viewport={{once: true}}
                 >
                     <div className="flex-1 overflow-hidden ">
-                        <div className="relative z-10 p-5 border-2 rounded-full w-35 h-35 bg-black bg-opacity-50 float-left">
-                            avatar
+                        <div className="relative z-10 border-2 rounded-full w-35 h-35 bg-black bg-opacity-50 float-left">
+                            <img src={"/avatar.jpg"} alt={"avatar"} className={"rounded-full w-full h-full object-cover block"} />
                         </div>
                     </div>
                     <div>
@@ -77,7 +85,10 @@ export function ContactSection(){
                     </div>
                     <button
                         className="relative z-10 btn-white-outline "
-                        onClick={() => setIsCallButtonHovered(true)}
+                        onClick={() => {
+                            setIsCallButtonHovered(true)
+                            handleOpenCall()
+                        }}
                     >
                         <LettersPullUp text={"Volejte Hned"}/>
                     </button>
@@ -88,6 +99,7 @@ export function ContactSection(){
                         </div>
                         <button
                             className="relative  z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                            onClick={handleOpenEmail}
                         >
                             <ArrowRight className="h-6 w-6 text-gray-500" />
                         </button>

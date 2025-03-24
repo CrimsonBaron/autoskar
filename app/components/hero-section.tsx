@@ -28,29 +28,29 @@ export function HeroSection() {
                         spolehlivost a péče na prvním místě.
 
                 </h1>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 mb-4 text-lg text-gray-600">
                     jen u Autoskar
                 </p>
             </motion.div>
             <motion.div
-                className="flex-1"
-                initial={{
-                    opacity: 0,
-                    y: 20,
-                }}
-                animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                        duration: 0.5,
-                        delay: 0.2 ,
-                        ease: "easeOut",
-                        once: true,
-                    },
-                }}
-            >
-                {/* add 3d car model some cartoonish stuff */}
-            </motion.div>
+            className="flex-1 flex justify-center rounded-3xl h-80 items-center"
+            initial={{
+                opacity: 0,
+                y: 20,
+            }}
+            animate={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                    duration: 0.5,
+                    delay: 0.2 ,
+                    ease: "easeOut",
+                    once: true,
+                },
+            }}
+        >
+            <img src={"/hero.png"} alt={"hero image"} className={"rounded-3xl h-full w-full object-cover block"} />
+        </motion.div>
         </motion.section>
     )
 }
