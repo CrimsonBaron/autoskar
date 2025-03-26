@@ -14,4 +14,4 @@ EXPOSE 3000/tcp
 EXPOSE 3000/udp
 ENV HOST=0.0.0.0
 WORKDIR /usr/src/app/examples/bun/websocket
-ENTRYPOINT [ "bun", "run", "build/server/index.js" ]
+ENTRYPOINT [ "bun", "run", "start" ]
