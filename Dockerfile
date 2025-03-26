@@ -1,21 +1,17 @@
-# Use a Node.js base image with Bun pre-installed
-FROM oven/bun:latest as base
+# use the official Bun image
+# see all versions at https://hub.docker.com/r/oven/bun/tags
+FROM oven/bun:1 AS base
+WORKDIR /usr/src/app
 
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy package.json and bun.lockb to the working directory
-COPY package.json bun.lock ./
-
-# Install dependencies using Bun
-RUN bun install
-
-# Copy the rest of the application code
 COPY . .
 
-# Build the React application for production
-RUN bun run build
+# [optional] tests & build
+ENV NODE_ENV=production
 
-
-# Start Nginx when the container runs
-CMD ["bun", "run", "start"]
+# run the app
+USER bun
+EXPOSE 3000/tcp
+EXPOSE 3000/udp
+ENV HOST=0.0.0.0
+WORKDIR /usr/src/app/examples/bun/websocket
+ENTRYPOINT [ "bun", "run", "build/server/index.js" ]
