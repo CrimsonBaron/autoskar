@@ -2,7 +2,7 @@
 FROM oven/bun:latest AS deps
 WORKDIR /app
 COPY package.json bun.lock ./
-RUN bun install --production=false # Install dev dependencies during build
+RUN bun install # Install dev dependencies during build
 
 # Stage 2: Build the Application
 FROM oven/bun:latest AS builder
@@ -16,10 +16,10 @@ FROM oven/bun:latest AS production
 WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --production # Install only production dependencies
-COPY --from=builder /app/dist ./dist #Or /app/build, adjust as needed
+COPY --from=builder /app/dist ./dist
 
 # Expose the port your app listens on (if necessary)
 EXPOSE 3000
 
 # Run the application
-CMD ["bun", "run", "start"] #Or just ["bun", "start"]
+CMD ["bun", "run", "start"]
