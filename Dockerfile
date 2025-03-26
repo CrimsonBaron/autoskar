@@ -6,6 +6,7 @@ COPY . .
 
 
 # [optional] tests & build
+RUN bun run install
 RUN bun run build
 ENV NODE_ENV=production
 
