@@ -1,22 +1,25 @@
-FROM node:20-alpine AS development-dependencies-env
-COPY . /app
+# Stage 1: Install Dependencies
+FROM oven/bun:latest AS deps
 WORKDIR /app
-RUN npm ci
+COPY package.json bun.lockb ./
+RUN bun install --production=false # Install dev dependencies during build
 
-FROM node:20-alpine AS production-dependencies-env
-COPY ./package.json package-lock.json /app/
+# Stage 2: Build the Application
+FROM oven/bun:latest AS builder
 WORKDIR /app
-RUN npm ci --omit=dev
+COPY . .
+COPY --from=deps /app/node_modules ./node_modules
+RUN bun run build # Assuming your build script is named "build"
 
-FROM node:20-alpine AS build-env
-COPY . /app/
-COPY --from=development-dependencies-env /app/node_modules /app/node_modules
+# Stage 3: Production Image
+FROM oven/bun:latest AS production
 WORKDIR /app
-RUN npm run build
+COPY package.json bun.lockb ./
+RUN bun install --production # Install only production dependencies
+COPY --from=builder /app/dist ./dist #Or /app/build, adjust as needed
 
-FROM node:20-alpine
-COPY ./package.json package-lock.json /app/
-COPY --from=production-dependencies-env /app/node_modules /app/node_modules
-COPY --from=build-env /app/build /app/build
-WORKDIR /app
-CMD ["npm", "run", "start"]
+# Expose the port your app listens on (if necessary)
+EXPOSE 3000
+
+# Run the application
+CMD ["bun", "run", "start"] # Or just ["bun", "start"]
